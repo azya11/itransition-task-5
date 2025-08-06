@@ -1,0 +1,35 @@
+{
+  "name": "book-scribe-generator",
+  "version": "1.0.0",
+  "description": "A web application for generating fake book information for testing book store applications",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "client": "cd book-scribe-generator && npm start",
+    "build": "cd book-scribe-generator && npm run build",
+    "install-client": "cd book-scribe-generator && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "csv-writer": "^1.6.0",
+    "express": "^4.21.2",
+    "helmet": "^7.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "keywords": [
+    "book",
+    "generator",
+    "testing",
+    "faker",
+    "react",
+    "express"
+  ],
+  "author": "Aziz Shamuratov",
+  "license": "MIT"
+}
