@@ -17,6 +17,8 @@ obj/
 *.cache
 *.pdb
 *.log
+out/
+publish/
 
 # IDE
 .vs/
