@@ -34,6 +34,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// In production, we still want Swagger for API testing
+if (app.Environment.IsProduction())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Book Scribe Generator API v1");
+        c.RoutePrefix = "swagger";
+    });
+}
+
 app.UseHttpsRedirection();
 app.UseCors("AllowAll");
 
